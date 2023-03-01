@@ -18,11 +18,8 @@ import ListOfCar from '../Components/ListOfCar'
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 
+
 const Homepage = () => {
-    // useEffect(() => {
-    //      myFunction()
-        
-    // }, [])
     
     const [Display,setDisplay] = useState(false);
 
@@ -44,9 +41,12 @@ const Homepage = () => {
    
   return (
     <div>
-          {/* <!-- Header End -->
+        {/* <!-- Header --> */}
+
+        <Navbar/>
+         
+        {/* <!-- Header End -->
   <!-- BANNER --> */}
-<Navbar/>
   <section className="banner-bg">
     <div className="banner-background">
         <img src={bannerbg} className="img-fluid banner-surcle-bg" alt=""/>
@@ -307,6 +307,7 @@ const Homepage = () => {
     {/* <!-- Application End-->
        <!-- Footer--> */}
 <Footer/>
+{/* <!-- Footer End--> */}
     </div>
   )
 }

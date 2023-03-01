@@ -210,15 +210,25 @@ html{overflow-x: hidden}
         background-color: #fff;
         margin: auto;
     border-radius: 40px;}
-    .cars-img{border-radius: 30px;}
-    .car-details{display: flex;
+    .cars-img{
+        border-radius: 30px;}
+    .car-details{
+        display: flex;
     justify-content: space-between;
     padding-top: 15px;}
+   
     .car-name{margin-bottom: 0;
         color: #00477a;
         font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-font-weight: 700;}
+font-weight: 700;
+width: 200px !important; 
+
+overflow: hidden !important;
+white-space: nowrap; 
+text-overflow: ellipsis !important; 
+}
+
 .car-price{margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
