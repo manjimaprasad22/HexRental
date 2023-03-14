@@ -3,6 +3,7 @@ import '../Assets/style/style.css'
 import logo from '../Assets/images/HexRentals-Logo.png'
 import translate from '../Assets/images/google-translate.png'
 import $ from 'jquery'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   
@@ -36,10 +37,10 @@ const Navbar = () => {
                     <a className="nav-link nav-category hvr-underline-from-center" href="#">ABOUT US <span className="sr-only">(current)</span></a>
                   </li>
                   <li className="nav-item active">
-                    <a className="nav-link nav-category hvr-underline-from-center" href="#">CAR RENTAL <span className="sr-only">(current)</span></a>
+                    <Link className="nav-link nav-category hvr-underline-from-center" to={'/carlisting'}>CAR RENTAL <span className="sr-only">(current)</span></Link>
                   </li>
                   <li className="nav-item active">
-                    <a className="nav-link nav-category hvr-underline-from-center" href="#">SERVICES <span className="sr-only">(current)</span></a>
+                    <Link className="nav-link nav-category hvr-underline-from-center" >SERVICES <span className="sr-only">(current)</span></Link>
                   </li>
                   <li className="nav-item active">
                     <a className="nav-link nav-category hvr-underline-from-center" href="#">CAREERS<span className="sr-only">(current)</span></a>
@@ -56,10 +57,10 @@ const Navbar = () => {
                     LOGIN/REGISTRATION
                   </a>
                   <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="#">Action</a>
-                    <a className="dropdown-item" href="#">Another action</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">Something else here</a>
+                    <Link className="dropdown-item" to={'/login'}>Login</Link>
+                    <Link className="dropdown-item" to={'/register'}>Register</Link>
+                    {/* <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="#">Something else here</a> */}
                   </div>
                 </li>
     

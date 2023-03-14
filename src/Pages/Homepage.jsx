@@ -17,12 +17,13 @@ import appphones from '../Assets/images/app-phones.png'
 import ListOfCar from '../Components/ListOfCar'
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import SearchCarBox from '../Components/SearchCarBox'
 
 const Homepage = () => {
     
-    const [Display,setDisplay] = useState(false);
-
+    
     const myFunction=()=> {
         // var dots = document.getElementById("dots");
         // var moreText = document.getElementById("more");
@@ -53,77 +54,7 @@ const Homepage = () => {
 
       <div className="container">
       <div className="row">
-        <div className="col-lg-4 car-banner-img">
-            <div className="banner-registration">
-                <div className="banner-registration-registration">
-                    <h6 className="banner-register-name">Search your ride</h6>
-                </div>
-                    <div className="form-group">
-                        <label for="exampleFormControlSelect1" className="banner-form-label">SELECT CITY</label>
-                        <select className="form-control" id="exampleFormControlSelect1">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                      <div className="form-group">
-                        <label for="exampleFormControlSelect1" className="banner-form-label">SELECT LOCATION</label>
-                        <select className="form-control" id="exampleFormControlSelect1">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                      
-    
-        <div className="row">
-            <div className="form-group col-md-6 col-6 date-col">
-                <label for="exampleFormControlSelect1" className="banner-form-label">RETURN DATE</label>
-                <input name="txtdate" type="date" id="txtdate" className="form-control"/>
-            </div>
-           
-            <div className="form-group col-md-6 col-6 time-col">
-                <label for="exampleFormControlSelect1" className="banner-form-label">RETURN TIME</label>
-                <select name="ddlpickTime" id="ddlpickTime" className="time-box">
-                    <option value="00:00">00:00</option>
-                    <option value="00:30">00:30</option>
-                    <option value="01:00">01:00</option>
-                    <option value="01:30">01:30</option>
-                    <option value="02:00">02:00</option>
-                    <option value="02:30">02:30</option>
-                  </select>
-            
-            </div>
-          </div>
-       
-         
-         <div className="row">
-            <div className="form-group col-md-6 col-6 date-col">
-                <label for="exampleFormControlSelect1" className="banner-form-label">RETURN DATE</label>
-                <input name="txtdate" type="date" id="txtdate" className="form-control"/>
-            </div>
-            <div className="form-group col-md-6 col-6 time-col">
-                <label for="exampleFormControlSelect1" className="banner-form-label">RETURN TIME</label>
-                <select name="ddlpickTime" id="ddlpickTime" className="time-box">
-                    <option value="00:00">00:00</option>
-                    <option value="00:30">00:30</option>
-                    <option value="01:00">01:00</option>
-                    <option value="01:30">01:30</option>
-                    <option value="02:00">02:00</option>
-                    <option value="02:30">02:30</option>
-                  </select>
-            </div>
-          </div>
-         <div className="form-register">         
-         <button className="btn btn-primary form-register-btn" type="submit">SEARCH</button>
-        </div> 
-
-            </div>
-        </div>
+        <SearchCarBox/>
         <div className="col-lg-8 ">
             <div className="banner-car-img">
             <img  src={bannercar} className="img-fluid banner-car" alt=""/>
@@ -153,7 +84,7 @@ const Homepage = () => {
                             <a className="service-more-btn" href="">Read More <i className="fas fa-arrow-right service-arrow"></i> </a>
 
             
-
+                            
 
                         </div>
                         <div className="col-lg-4 service-img">
